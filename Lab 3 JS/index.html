@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <script src="script.js"></script>
     <div class="main">
 
         <div class="form">
@@ -16,14 +17,22 @@
                 <table>
                     <tr>
                         <td>Username: </td>
-                        <td><input type="text" id="uname"></td>
+                        <td><input type="text" id="uname">
+
+                        </td>
+                        <td>
+                            <p id="uname_msg"></p>
+                        </td>
                     </tr>
                     <tr>
                         <td>Password: </td>
                         <td><input type="text" id="Password"></td>
+                        <td>
+                            <p id="pwd_msg"></p>
+                        </td>
                     </tr>
                     <tr>
-                        <td><input type="Submit" name="" id="submit" value="Submit"></td>
+                        <td><input type="button" name="" id="submit" value="Submit" onclick="check()"></td>
                     </tr>
 
                 </table>
