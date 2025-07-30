@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <title>Name</title>
+</head>
+
+<body>
+    <form id="form" action="">
+        Name:
+        <input type="text" name="" id="name"><br>
+        <input type="submit" value="Submit">
+        <p id="msg"></p>
+    </form>
+
+</body>
+<script>
+    document.querySelector("form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        const name = document.getElementById("name").value;
+        let msg = document.getElementById("msg");
+        let firstChar = name.charCodeAt(0);
+
+
+
+        if (name === "") {
+
+            msg.style.color = "red";
+            msg.innerHTML = "Name can't Be Empty";
+            return;
+        } else {
+
+            msg.innerHTML = "";
+        }
+
+        if (!((firstChar >= 65 && firstChar <= 90) || (firstChar >= 97 && firstChar <= 122))) {
+            msg.style.color = "red";
+            msg.innerHTML = "Name Must start with a letter ";
+            return;
+        } else {
+
+            msg.innerHTML = "";
+
+        }
+
+
+        for (let i = 0; i < name.length; i++) {
+            const char = name.charCodeAt(i);
+            const charat = name.charAt(i);
+            if (
+                !(
+                    (char >= 65 && char <= 90) ||
+                    (char >= 97 && char <= 122) ||
+                    charat === '.' ||
+                    charat === '-'
+                )
+            ) {
+                msg.style.color = "red";
+                msg.innerHTML = "Name can only contain letters, dots (.), or dashes (-).";
+
+                return;
+            } else {
+                msg.innerHTML = "";
+            }
+        }
+
+        alert("Form submitted successfully!");
+    });
+
+</script>
+
+</html>
