@@ -1,0 +1,40 @@
+*{
+
+    margin: 0;
+    padding: 0;
+}
+body{
+
+    background: thistle;
+}
+.form{
+
+    margin: 50px auto;
+    width: 600px;
+    align-content: center;
+    background: rgb(125, 167, 167);
+    text-align: center;
+}
+
+.form input{
+
+   margin-top: 10px;
+   border: none;
+   border-radius: 14px;
+   background-color: rgb(211, 215, 219);
+   height: 20px;
+}
+
+.showdb{
+
+    margin: 0 auto;
+    width: 600px ;
+}
+
+.showdb tr td{
+    background: beige;
+}
+.showdb tr th{
+    color: rebeccapurple;
+    margin-left: 10px;
+}
